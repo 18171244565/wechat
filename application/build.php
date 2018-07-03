@@ -29,4 +29,12 @@ return [
         'view'       => ['index/index'],
     ],
     // 其他更多的模块定义
+    'api' => [
+        '__file__' => ['common.php', 'index.html'],
+        '__dir__' => ['behavior', 'controller', 'model', 'view', 'validate'],
+        'controller' => ['Index', 'Banner', 'UserType', 'Common'],
+        'model' => ['User', 'UserType'],
+        'view' => ['index/index'],
+        'validate' => ['TestValidate']
+    ],
 ];
