@@ -31,11 +31,15 @@ return [
     // 其他更多的模块定义
     'api' => [
         '__file__' => ['common.php', 'index.html'],
-        '__dir__' => ['behavior', 'controller/v1', 'model', 'view', 'validate','lib\exception'],
+        '__dir__' => ['behavior', 'controller/v1', 'model', 'view', 'validate'],
         'controller' => ['v1/Banner', 'v1/Common','v1/Index'],
         'model' => ['User', 'UserType','Banner'],
         'view' => ['index/index'],
-        'validate' => ['TestValidate','isInt','BaseValidate'],
-        'lib\exception' => ['BaseException','HandleException','BannerException']
+        'validate' => ['TestValidate','isInt','BaseValidate']
+    ],
+    'lib' => [
+        '__file__' => ['common.php', 'index.html'],
+        '__dir__' => ['exception'],
+        'exception' => ['HandleException','BaseException','BannerException']
     ],
 ];
