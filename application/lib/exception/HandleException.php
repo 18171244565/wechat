@@ -3,6 +3,7 @@ namespace app\lib\exception;
 
 
 use think\exception\Handle;
+use think\facade\Log;
 use think\facade\Request;
 
 class HandleException extends Handle
@@ -19,6 +20,7 @@ class HandleException extends Handle
             $this->code = '500';
             $this->message = '服务器内部错误！';
             $this->error_code = '999';
+            $this->recordErrorLog($e);
         }
         $request = Request::instance();
         $res = [
@@ -28,5 +30,10 @@ class HandleException extends Handle
         ];
         return json($res,$this->code);
 
+    }
+
+    public function recordErrorLog($e)
+    {
+        Log::write($e->getMessage(),'error');
     }
 }

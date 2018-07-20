@@ -10,7 +10,7 @@ class Banner extends Common
     {
         $res = model('Banner')->getBannerInfo($id);
         if(!$res){
-            throw new BannerException('对不起您需要的banner暂时未找到！');
+            throw new Exception('对不起您需要的banner暂时未找到！');
         }
 
         return $res;
