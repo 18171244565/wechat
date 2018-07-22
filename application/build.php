@@ -40,6 +40,6 @@ return [
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['exception'],
-        'exception' => ['HandleException','BaseException','BannerException']
+        'exception' => ['paramsException','HandleException','BaseException','BannerException']
     ],
 ];

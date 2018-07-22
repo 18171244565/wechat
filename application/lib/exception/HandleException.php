@@ -20,7 +20,12 @@ class HandleException extends Handle
             $this->code = '500';
             $this->message = '服务器内部错误！';
             $this->error_code = '999';
-            $this->recordErrorLog($e);
+            if(config('app_debug')){
+                return parent::render($e);
+            }else{
+                $this->recordErrorLog($e);
+            }
+
         }
         $request = Request::instance();
         $res = [
