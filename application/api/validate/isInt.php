@@ -6,8 +6,8 @@ namespace app\api\validate;
 class isInt extends BaseValidate
 {
     protected $rule = [
-        'id'=>'require|isInt',
-        'name'=>'require|max:10'
+        'id'=>'require|isInt'
+
     ];
 
     protected function isInt($value,$rule='',$data='',$field='')

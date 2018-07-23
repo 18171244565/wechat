@@ -1,19 +1,19 @@
 <?php
 namespace app\api\controller\v1;
 
+use app\api\model\BannerModel;
 use app\api\validate\isInt;
 use app\lib\exception\BannerException;
 use think\Exception;
-
 class Banner extends Common
 {
     public function getBanner($id)
     {
         (new isInt())->goCheck();
-        $res = model('Banner')->getBannerInfo($id);
+        $res = BannerModel::getBannerInfo($id);
         if(!$res){
-            throw new Exception('对不起您需要的banner暂时未找到！');
+            throw new BannerException();
         }
-        return $res;
+        return json($res);
     }
 }
