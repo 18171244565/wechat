@@ -37,8 +37,8 @@ class HandleException extends Handle
 
     }
 
-    public function recordErrorLog($e)
+    public function recordErrorLog(\Exception $e)
     {
-        Log::write($e->getMessage(),'error');
+        Log::record($e->getMessage(),'error');
     }
 }

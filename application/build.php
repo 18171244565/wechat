@@ -33,7 +33,7 @@ return [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['behavior', 'controller/v1', 'model', 'view', 'validate'],
         'controller' => ['v1/Banner', 'v1/Common','v1/Index'],
-        'model' => ['User', 'UserType','BannerModel'],
+        'model' => ['User', 'UserType','Banner','BannerItem','Image'],
         'view' => ['index/index'],
         'validate' => ['TestValidate','isInt','BaseValidate']
     ],
