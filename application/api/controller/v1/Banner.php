@@ -17,6 +17,7 @@ class Banner extends Common
         if(!$res){
             throw new BannerException();
         }
+       // $res = ['a'=>config('setting.img_prefix')];
         return $res;
     }
 }

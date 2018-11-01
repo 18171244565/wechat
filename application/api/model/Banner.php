@@ -9,6 +9,7 @@ use think\Model;
 
 class Banner extends Model
 {
+    protected $hidden = ['id','update_time'];
     public function bannerItems()
     {
         return $this->hasMany('BannerItem','banner_id','id');
