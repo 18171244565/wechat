@@ -32,8 +32,8 @@ return [
     'api' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['behavior', 'controller/v1', 'model', 'view', 'validate'],
-        'controller' => ['v1/Banner', 'v1/Common','v1/Index'],
-        'model' => ['User', 'UserType','Banner','BannerItem','Image'],
+        'controller' => ['v1/Banner', 'v1/Common','v1/Index','v1/Theme'],
+        'model' => ['User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
         'validate' => ['TestValidate','isInt','BaseValidate']
     ],

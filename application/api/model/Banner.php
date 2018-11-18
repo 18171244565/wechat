@@ -22,7 +22,7 @@ class Banner extends Model
        /*$result = Db::table('banner_item')->where(function ($query) use ($id){
            $query->where('banner_id','=',$id);
        })->select();*/
-       $result = self::with(['bannerItems','bannerItems.img'])->find($id);
+       $result = self::with(['bannerItems', 'bannerItems.img'])->find($id);
        return $result;
    }
 }

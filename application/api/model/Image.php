@@ -3,17 +3,12 @@ namespace app\api\model;
 
 use think\Model;
 
-class Image extends Model
+class Image extends BaseModel
 {
     protected $visible = ['url'];
 
     public function getUrlAttr($value,$data)
     {
-        $url = $value;
-        if($data['from']==1){
-           $url = config('setting.img_prefix').$value;
-
-        }
-        return $url;
+        return $this->getPrefixUrl($value,$data);
     }
 }
