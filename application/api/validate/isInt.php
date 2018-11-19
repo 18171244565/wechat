@@ -9,14 +9,9 @@ class isInt extends BaseValidate
         'id'=>'require|isInt'
 
     ];
+    protected $message = [
+        'id.isInt'=>'您所传的参数id不是一个正整数',
+        'id.require'=>'id is must need!',
+    ];
 
-    protected function isInt($value,$rule='',$data='',$field='')
-    {
-        if(preg_match('/^[1-9]\d*$/',$value)){
-            return true ;
-        }else{
-            return $field.':您所传的参数不是一个正整数!';
-        }
-
-    }
 }

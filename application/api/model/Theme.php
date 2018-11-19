@@ -12,6 +12,6 @@ class Theme extends BaseModel
 
     public function headImg()
     {
-        $this->belongsTo('Image','head_img_id','id');
+        return $this->belongsTo('Image','head_img_id','id');
     }
 }

@@ -22,5 +22,15 @@ class BaseValidate extends Validate
         }else{
             return true;
         }
+
+    }
+    protected function isInt($value,$rule='',$data='',$field='')
+    {
+        if(preg_match('/^[1-9]\d*$/',$value)){
+            return true ;
+        }else{
+            return false;
+        }
+
     }
 }

@@ -35,7 +35,7 @@ return [
         'controller' => ['v1/Banner', 'v1/Common','v1/Index','v1/Theme'],
         'model' => ['User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
-        'validate' => ['TestValidate','isInt','BaseValidate']
+        'validate' => ['IdCollection','isInt','BaseValidate']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
