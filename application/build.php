@@ -32,14 +32,15 @@ return [
     'api' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['behavior', 'controller/v1', 'model', 'view', 'validate'],
-        'controller' => ['v1/Banner', 'v1/Common','v1/Index','v1/Theme','v1\Product'],
-        'model' => ['User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
+        //'controller' => ['v1/Banner', 'v1/Common','v1/Index','v1/Theme','v1/Product'],
+        'controller\v1' => ['Category'],
+        'model' => ['Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
         'validate' => ['IdCollection','isInt','BaseValidate','CountValidate']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['exception'],
-        'exception' => ['ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
+        'exception' => ['CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
     ],
 ];
