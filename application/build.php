@@ -31,12 +31,12 @@ return [
     // 其他更多的模块定义
     'api' => [
         '__file__' => ['common.php', 'index.html'],
-        '__dir__' => ['behavior', 'controller/v1', 'model', 'view', 'validate'],
-        //'controller' => ['v1/Banner', 'v1/Common','v1/Index','v1/Theme','v1/Product'],
-        'controller\v1' => ['Category'],
-        'model' => ['Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
+        '__dir__' => ['service','behavior', 'controller/v1', 'model', 'view', 'validate'],
+        'controller\v1' => ['Banner', 'Common','Index','Theme','Product','Token'],
+        'model' => ['User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
-        'validate' => ['IdCollection','isInt','BaseValidate','CountValidate']
+        'validate' => ['TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
+        'service'=>['UserToken']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
