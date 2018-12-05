@@ -9,21 +9,26 @@
 // | Author: 流年 <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// 应用公共文件
-function curl_get($url=''){
-    //初始化
+/**
+ * @param string $url get请求地址
+ * @param int $httpCode 返回状态码
+ * @return mixed
+ */
+function curl_get($url, &$httpCode = 0)
+{
     $ch = curl_init();
-    //设置选项，包括url
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    //执行并获取html内容
-    $output = curl_exec($ch);
-    //释放curl句柄
+
+    //不做证书校验,部署在linux环境下请改为true
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+    $file_contents = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-    return $output;
+    return $file_contents;
 }
-function curl_post($url='',$data){
+/*function curl_post($url='',$data){
     $ch = curl_init ();
     curl_setopt ( $ch, CURLOPT_URL, $url );
     curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
@@ -33,4 +38,4 @@ function curl_post($url='',$data){
     $file_contents = curl_exec ( $ch );
     curl_close ( $ch );
     return $file_contents;
-}
+}*/
