@@ -11,6 +11,8 @@ class Token extends Common
         (new TokenCheck())->goCheck();
         $obj = new UserToken($code);
         $token = $obj->get();
-        return $token;
+        return [
+            'token'=>$token
+        ];
     }
 }

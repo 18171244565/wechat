@@ -28,4 +28,9 @@ class Product extends Common
         $result->hidden(['summary']);
         return $result;
     }
+
+    public function getGoodsInfo($id='')
+    {
+
+    }
 }

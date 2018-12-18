@@ -18,11 +18,16 @@ Route::rule('hello/:id','index/index/hello','post|get');
 Route::get('api/:version/banner/:id?', 'api/:version.Banner/getBanner');
 Route::get('api/:version/theme', 'api/:version.Theme/getSimpleList');
 Route::get('api/:version/theme/:id?', 'api/:version.Theme/getComplexOne');
-Route::get('api/:version/product/recent', 'api/:version.Product/getRecent');
+
 Route::get('api/:version/category/all', 'api/:version.Category/categoryList');
-Route::get('api/:version/product/category', 'api/:version.Product/categoryGoods');
+
 Route::post('api/:version/user/token', 'api/:version.Token/getToken');
 
+Route::group('api/:version/product/',function(){
+    Route::get(':id', 'api/:version.Product/getGoodsInfo',[],['id'=>'{1,9}\d*']);
+    Route::get('recent', 'api/:version.Product/getRecent');
+    Route::get('category', 'api/:version.Product/categoryGoods');
+});
 return [
 
 ];

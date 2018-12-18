@@ -36,11 +36,11 @@ return [
         'model' => ['User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
         'validate' => ['TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
-        'service'=>['UserToken']
+        'service'=>['UserToken','Token']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['exception'],
-        'exception' => ['WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
+        'exception' => ['TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
     ],
 ];

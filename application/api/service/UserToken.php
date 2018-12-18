@@ -2,10 +2,11 @@
 namespace app\api\service;
 
 use app\api\model\User;
+use app\lib\exception\TokenException;
 use app\lib\exception\WechatException;
 use think\Exception;
 
-class UserToken
+class UserToken extends Token
 {
     protected $code ;
     protected $appId;
@@ -34,7 +35,7 @@ class UserToken
         if(array_key_exists('errcode',$result)){
             $this->processLoginError($result);
         }else{
-            $this->grantToken($result);
+            $token = $this->grantToken($result);
         }
         return $token;
     }
@@ -53,8 +54,18 @@ class UserToken
         }
         $cacheValue = $result;
         $cacheValue['uid'] = $uid;
-        $cacheValue['scope'] = 16;
-        
+        $cacheValue['scope'] = 16;//权限越大值就越大
+
+        $key = parent::getTokenKey();
+        $value = json_encode($cacheValue);
+        $expire_time = config('secure.tokenExpireTime');
+
+        $cache_result = cache($key,$value,$expire_time);
+
+        if(!$cache_result){
+            throw new TokenException();
+        }
+        return $key;
     }
     private function processLoginError($wxResult=[])
     {
