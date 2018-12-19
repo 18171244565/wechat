@@ -31,6 +31,11 @@ class Product extends Common
 
     public function getGoodsInfo($id='')
     {
-
+        (new isInt())->goCheck();
+        $product = ProductModel::getOne($id);
+        if(!$product){
+            throw new ProductException();
+        }
+        return $product;
     }
 }

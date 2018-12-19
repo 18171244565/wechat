@@ -24,7 +24,7 @@ Route::get('api/:version/category/all', 'api/:version.Category/categoryList');
 Route::post('api/:version/user/token', 'api/:version.Token/getToken');
 
 Route::group('api/:version/product/',function(){
-    Route::get(':id', 'api/:version.Product/getGoodsInfo',[],['id'=>'{1,9}\d*']);
+    Route::get(':id', 'api/:version.Product/getGoodsInfo',[],[':id'=>'{1,9}\d*']);
     Route::get('recent', 'api/:version.Product/getRecent');
     Route::get('category', 'api/:version.Product/categoryGoods');
 });

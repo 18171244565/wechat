@@ -30,4 +30,20 @@ class Product extends BaseModel
         $result = self::where('category_id','=',$id)->select();
         return $result;
     }
+    public function properties(){
+        return $this->hasMany('ProductProperty','product_id','id');
+    }
+
+    public function imgs()
+    {
+        return $this->hasMany('ProductImage','product_id','id');
+    }
+    public static function getOne($id)
+    {
+        //return self::with(['properties'])->with(['imgs.imgList'])->find($id);
+        //为了实现产品详情图片按照闭包的方式去查询并给出排序
+        return self::with(['properties'])->with(['imgs'=>function($query){
+            $query->with('imgList')->order('order asc');
+        }])->find($id);
+    }
 }
