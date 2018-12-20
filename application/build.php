@@ -32,10 +32,10 @@ return [
     'api' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['service','behavior', 'controller/v1', 'model', 'view', 'validate'],
-        'controller\v1' => ['Banner', 'Common','Index','Theme','Product','Token'],
-        'model' => ['ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
+        'controller\v1' => ['Address','Banner', 'Common','Index','Theme','Product','Token'],
+        'model' => ['Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
-        'validate' => ['TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
+        'validate' => ['AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
         'service'=>['UserToken','Token']
     ],
     'lib' => [

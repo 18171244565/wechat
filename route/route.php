@@ -28,6 +28,8 @@ Route::group('api/:version/product/',function(){
     Route::get('recent', 'api/:version.Product/getRecent');
     Route::get('category', 'api/:version.Product/categoryGoods');
 });
+Route::post('api/:version/address', 'api/:version.Address/createAndUpdate');
+
 return [
 
 ];

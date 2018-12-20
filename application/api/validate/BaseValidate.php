@@ -33,4 +33,12 @@ class BaseValidate extends Validate
         }
 
     }
+    public function isNotEmpty($value)
+    {
+        $value = trim($value);
+        if(empty($value) && !is_string($value)){
+            return false;
+        }
+        return true;
+    }
 }
