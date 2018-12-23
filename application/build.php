@@ -41,6 +41,6 @@ return [
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['exception'],
-        'exception' => ['TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
+        'exception' => ['UserException','TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
     ],
 ];
