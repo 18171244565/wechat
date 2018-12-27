@@ -33,14 +33,15 @@ return [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['service','behavior', 'controller/v1', 'model', 'view', 'validate'],
         'controller\v1' => ['Address','Banner', 'Common','Index','Theme','Product','Token'],
-        'model' => ['Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
+        'model' => ['Order','Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
         'validate' => ['AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
         'service'=>['UserToken','Token']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
-        '__dir__' => ['exception'],
-        'exception' => ['UserException','TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException']
+        '__dir__' => ['exception','enum'],
+        'exception' => ['ForbiddenException','UserException','TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException'],
+        'enum'=>['ScopeEnum']
     ],
 ];

@@ -2,6 +2,7 @@
 namespace app\api\service;
 
 use app\api\model\User;
+use app\lib\enum\ScopeEnum;
 use app\lib\exception\TokenException;
 use app\lib\exception\WechatException;
 use think\Exception;
@@ -54,7 +55,7 @@ class UserToken extends Token
         }
         $cacheValue = $result;
         $cacheValue['uid'] = $uid;
-        $cacheValue['scope'] = 16;//权限越大值就越大
+        $cacheValue['scope'] = ScopeEnum::User;//权限越大值就越大
 
         $key = parent::getTokenKey();
         $value = json_encode($cacheValue);

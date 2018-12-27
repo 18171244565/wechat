@@ -29,7 +29,7 @@ Route::group('api/:version/product/',function(){
     Route::get('category', 'api/:version.Product/categoryGoods');
 });
 Route::post('api/:version/address', 'api/:version.Address/createAndUpdate');
-
+Route::get('api/:version/third', 'api/:version.Address/third');
 return [
 
 ];
