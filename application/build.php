@@ -32,11 +32,11 @@ return [
     'api' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['service','behavior', 'controller/v1', 'model', 'view', 'validate'],
-        'controller\v1' => ['Address','Banner', 'Common','Index','Theme','Product','Token'],
+        'controller\v1' => ['Order','Address','Banner', 'Common','Index','Theme','Product','Token'],
         'model' => ['Order','Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
-        'validate' => ['AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
-        'service'=>['UserToken','Token']
+        'validate' => ['ProductCheck','AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
+        'service'=>['Order','UserToken','Token']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
