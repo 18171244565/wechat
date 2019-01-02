@@ -41,7 +41,7 @@ return [
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['exception','enum'],
-        'exception' => ['ForbiddenException','UserException','TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException'],
+        'exception' => ['OrderException','ForbiddenException','UserException','TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException'],
         'enum'=>['ScopeEnum']
     ],
 ];

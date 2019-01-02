@@ -64,3 +64,19 @@ function fromArrayToModel($m , $array)
     }
     return $m;
 }
+function cast_index_to_key($arr, $index, $separator='-'){
+    $new_arr = array();
+    foreach ($arr as $_row) {
+        if(is_array($index) && !empty($index)){
+            $arr_index = '';
+            foreach($index as $val){
+                $arr_index .= $_row[$val].$separator;
+            }
+            $arr_index = (!empty($arr_index) ? substr($arr_index, 0, -1) : $arr_index);
+        }else{
+            $arr_index = $_row[$index];
+        }
+        $new_arr[$arr_index] = $_row;
+    }
+    return $new_arr;
+}
