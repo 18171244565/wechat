@@ -6,11 +6,11 @@ use app\lib\exception\ParamsException;
 class ProductCheck extends BaseValidate
 {
     protected $rule = [
-        'products'=>'productCheck'
+        'products'=>'require|productCheck'
     ];
     protected $singleRule = [
-        'product_id'=>'required|isInt',
-        'count'=>'required|isInt'
+        'product_id'=>'require|isInt',
+        'count'=>'require|isInt'
     ];
     public function productCheck($values)
     {

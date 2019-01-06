@@ -1,9 +1,7 @@
 <?php
 namespace app\api\model;
 
-use think\Model;
-
-class Order extends Model
+class Order extends BaseModel
 {
-
+    protected $autoWriteTimestamp=true;
 }

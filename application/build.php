@@ -32,16 +32,16 @@ return [
     'api' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['service','behavior', 'controller/v1', 'model', 'view', 'validate'],
-        'controller\v1' => ['Order','Address','Banner', 'Common','Index','Theme','Product','Token'],
-        'model' => ['Order','Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
+        'controller\v1' => ['Pay','Order','Address','Banner', 'Common','Index','Theme','Product','Token'],
+        'model' => ['OrderProduct','UserAddress','Order','Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
         'validate' => ['ProductCheck','AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
-        'service'=>['Order','UserToken','Token']
+        'service'=>['Pay','Order','UserToken','Token']
     ],
     'lib' => [
         '__file__' => ['common.php', 'index.html'],
         '__dir__' => ['exception','enum'],
         'exception' => ['OrderException','ForbiddenException','UserException','TokenException','WechatException','CategoryException','ProductException','ThemeException','paramsException','HandleException','BaseException','BannerException'],
-        'enum'=>['ScopeEnum']
+        'enum'=>['ScopeEnum','OrderStatusEnum']
     ],
 ];

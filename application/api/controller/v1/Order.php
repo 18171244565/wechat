@@ -16,6 +16,7 @@ class Order extends Common
         (new ProductCheck())->goCheck();
         $uid = (new tokenService)->getUid();
         $oProducts = input('post.products/a');
-        (new orderService)->place($uid,$oProducts);
+        $result = (new orderService)->place($uid,$oProducts);
+        return $result;
     }
 }

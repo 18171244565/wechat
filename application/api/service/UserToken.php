@@ -31,7 +31,7 @@ class UserToken extends Token
         /**
          * openid = "oC2eH5Jd1LSc9rpulMXJhaepbVXI"
            session_key = "AaFyEIgJb2gnbCinUWJ2kw=="
-         *
+         *http://localhost/wechat/public/index.php?XDEBUG_SESSION_START=11566
         */
         if(array_key_exists('errcode',$result)){
             $this->processLoginError($result);
