@@ -6,16 +6,17 @@ use app\lib\enum\OrderStatusEnum;
 use app\lib\exception\OrderException;
 use app\lib\exception\ParamsException;
 use app\api\model\Order as orderModel;
+use think\Exception;
 use think\facade\Log;
-
+require_once "../extend/WxPay/WxPay.Api.php";
 class Pay
 {
     private $orderId;
     private $orderNo;
     public function __construct($id='')
     {
-        if(isset($id) && $id>0){
-            throw new ('订单号不能为空！');
+        if(isset($id) && intval($id)<=0){
+            throw new Exception('订单号不能为空！');
         }
         $this->orderId = $id;
     }
@@ -31,7 +32,7 @@ class Pay
                 'error_code'=>'90001'
             ]);
         }
-        $this->makeWxPreOrder($stock_ret['orderPrice']);
+        return $this->makeWxPreOrder($stock_ret['orderPrice']);
 
     }
 
@@ -47,17 +48,42 @@ class Pay
         $WxOrderData->SetTotal_fee($totalPrice*100);
         $WxOrderData->SetBody("零食商贩");
         $WxOrderData->SetOpenid($openid);
-        $WxOrderData->SetNotify_url('');
-        $this->getPaySign($WxOrderData);
+        $WxOrderData->SetNotify_url('http://qq.com');
+        $WxOrderData->SetAppid(config('wx.app_id'));
+        return $this->getPaySign($WxOrderData);
     }
 
     public function getPaySign($WxOrderData)
     {
-        $Wxorder = \Extend\Wxpay\WxPayApi::unifiedOrder($WxOrderData);
+        $Wxorder = \Api::unifiedOrder($WxOrderData,$WxOrderData);
         if($Wxorder['return_code']!='SUCCESS' || $Wxorder['result_code']!='SUCCESS'){
             Log::record($Wxorder,'error');
             Log::record('获取预支付订单失败！','error');
+            return $Wxorder;
         }
+        $this->savePrepayId($Wxorder);
+        return $this->paySign($Wxorder);
+    }
+
+    public function paySign($Wxorder)
+    {
+        $jsApiData = new \WxPayJsApiPay();
+        $jsApiData->SetTimeStamp((string)time());
+        $noncestr = md5(time().mt_rand(0,1000));
+        $jsApiData->SetNonceStr($noncestr);
+        $jsApiData->SetPackage('prepay_id='.$Wxorder['prepay_id']);
+        $jsApiData->SetSignType('MD5');
+        $jsApiData->SetAppid(config('wx.app_id'));
+
+        $sign = $jsApiData->MakeSign();
+        $apiData = $jsApiData->GetValues();
+        $apiData['paySign']=$sign;
+        return $apiData;
+    }
+
+    private function savePrepayId($Wxorder)
+    {
+       orderModel::where('id','=',$this->orderId)->update(['prepay_id'=>$Wxorder['prepay_id']]);
     }
     public function checkOrderValid($id)
     {

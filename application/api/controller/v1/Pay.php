@@ -2,7 +2,6 @@
 namespace app\api\controller\v1;
 
 use app\api\validate\isInt;
-use app\api\service\Pay as payService;
 class Pay extends Common
 {
     protected $beforeActionList = [
@@ -12,5 +11,7 @@ class Pay extends Common
     public function getPreOrder($id='')
     {
         (new isInt())->goCheck();
+        $payService = new \app\api\service\Pay($id);
+        return $payService->payOrder($id);
     }
 }

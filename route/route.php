@@ -31,6 +31,7 @@ Route::group('api/:version/product/',function(){
 Route::post('api/:version/address', 'api/:version.Address/createAndUpdate');
 Route::get('api/:version/third', 'api/:version.Address/third');
 Route::post('api/:version/order', 'api/:version.Order/placeOrder');
+Route::get('api/:version/order/pay/:id', 'api/:version.Pay/getPreOrder');
 return [
 
 ];
