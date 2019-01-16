@@ -6,5 +6,5 @@
  * Time: 22:01
  */
 return [
-    'img_prefix'=>'http://wechat.cn'
+    'img_prefix'=>'http://wechat.cn/images'
 ];

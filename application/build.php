@@ -35,7 +35,7 @@ return [
         'controller\v1' => ['Pay','Order','Address','Banner', 'Common','Index','Theme','Product','Token'],
         'model' => ['OrderProduct','UserAddress','Order','Address','ProductImage','ProductProperty','User','Category','User', 'BaseModel','Banner','BannerItem','Image','Theme','Product'],
         'view' => ['index/index'],
-        'validate' => ['ProductCheck','AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
+        'validate' => ['UserOrder','ProductCheck','AddressNew','TokenCheck','IdCollection','isInt','BaseValidate','CountValidate'],
         'service'=>['Pay','Order','UserToken','Token']
     ],
     'lib' => [

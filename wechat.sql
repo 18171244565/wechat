@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2018-07-03 23:52:44
+Date: 2019-01-16 23:50:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -180,11 +180,23 @@ CREATE TABLE `order` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `order_no` (`order_no`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of order
 -- ----------------------------
+INSERT INTO `order` VALUES ('1', 'C105970478249666', '1', null, null, '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('2', 'C105973307851570', '1', null, null, '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('3', 'C105973451429769', '1', null, null, '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('4', 'C105974147909511', '1', null, null, '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('5', 'C105974538521997', '1', null, null, '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('6', 'C105975677157060', '1', null, '1546697569', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('7', 'C105975904560087', '1', null, '1546697590', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('8', 'C105977519102435', '1', null, '1546697751', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('9', 'C105977872282695', '1', null, '1546697787', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('10', 'C105983498184352', '1', null, '1546698349', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', null, '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('11', 'C105987761878209', '1', null, '1546698776', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', '1546698776', '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
+INSERT INTO `order` VALUES ('12', 'C105003203201402', '1', null, '1546700320', '0.05', '1', 'http://wechat.cn/product-vg@1.png', '芹菜 半斤等5件商品', '5', '1546700320', '[{\"id\":1,\"haveStock\":true,\"count\":2,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"totalPrice\":0.02},{\"id\":2,\"haveStock\":true,\"count\":3,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"totalPrice\":0.03}]', '{\"id\":1,\"name\":\"\\u76ae\\u5a01\\u5f3a\",\"mobile\":\"18171244565\",\"province\":\"\\u6e56\\u5317\\u7701\",\"city\":\"\\u6b66\\u6c49\\u5e02\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u6c5f\\u590f\\u533a \\u6c64\\u900a\\u6e56\\u5c71\\u5e84\\u5e1d\\u666f\\u9601B101\",\"delete_time\":null,\"user_id\":1,\"update_time\":null}', null);
 
 -- ----------------------------
 -- Table structure for order_product
@@ -202,6 +214,16 @@ CREATE TABLE `order_product` (
 -- ----------------------------
 -- Records of order_product
 -- ----------------------------
+INSERT INTO `order_product` VALUES ('8', '1', '2', null, null);
+INSERT INTO `order_product` VALUES ('9', '1', '2', null, null);
+INSERT INTO `order_product` VALUES ('10', '1', '2', null, null);
+INSERT INTO `order_product` VALUES ('11', '1', '2', null, null);
+INSERT INTO `order_product` VALUES ('12', '1', '2', null, null);
+INSERT INTO `order_product` VALUES ('8', '2', '3', null, null);
+INSERT INTO `order_product` VALUES ('9', '2', '3', null, null);
+INSERT INTO `order_product` VALUES ('10', '2', '3', null, null);
+INSERT INTO `order_product` VALUES ('11', '2', '3', null, null);
+INSERT INTO `order_product` VALUES ('12', '2', '3', null, null);
 
 -- ----------------------------
 -- Table structure for product
@@ -227,7 +249,7 @@ CREATE TABLE `product` (
 -- Records of product
 -- ----------------------------
 INSERT INTO `product` VALUES ('1', '芹菜 半斤', '0.01', '998', null, '3', '/product-vg@1.png', '1', null, null, null, '13');
-INSERT INTO `product` VALUES ('2', '梨花带雨 3个', '0.01', '984', null, '2', '/product-dryfruit@1.png', '1', null, null, null, '10');
+INSERT INTO `product` VALUES ('2', '梨花带雨 3个', '0.01', '998', null, '2', '/product-dryfruit@1.png', '1', null, null, null, '10');
 INSERT INTO `product` VALUES ('3', '素米 327克', '0.01', '996', null, '7', '/product-rice@1.png', '1', null, null, null, '31');
 INSERT INTO `product` VALUES ('4', '红袖枸杞 6克*3袋', '0.01', '998', null, '6', '/product-tea@1.png', '1', null, null, null, '32');
 INSERT INTO `product` VALUES ('5', '春生龙眼 500克', '0.01', '995', null, '2', '/product-dryfruit@2.png', '1', null, null, null, '33');
@@ -404,11 +426,12 @@ CREATE TABLE `user` (
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `openid` (`openid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES ('1', 'oC2eH5Jd1LSc9rpulMXJhaepbVXI', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for user_address
@@ -427,8 +450,9 @@ CREATE TABLE `user_address` (
   `update_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of user_address
 -- ----------------------------
+INSERT INTO `user_address` VALUES ('1', '皮威强', '18171244565', '湖北省', '武汉市', '中国', '江夏区 汤逊湖山庄帝景阁B101', null, '1', null);

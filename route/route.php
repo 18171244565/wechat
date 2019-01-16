@@ -32,6 +32,8 @@ Route::post('api/:version/address', 'api/:version.Address/createAndUpdate');
 Route::get('api/:version/third', 'api/:version.Address/third');
 Route::post('api/:version/order', 'api/:version.Order/placeOrder');
 Route::get('api/:version/order/pay/:id', 'api/:version.Pay/getPreOrder');
+Route::get('api/:version/order/byuser', 'api/:version.order/getUserOrder');
+Route::get('api/:version/order/:id', 'api/:version.order/getOrderDetail',[],[':id'=>'{1,9}\d*']);
 return [
 
 ];
